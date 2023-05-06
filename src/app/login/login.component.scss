@@ -1,0 +1,32 @@
+.login-wrapper {
+  padding: 16px;
+
+  ion-item {
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-start: 8px;
+    --inner-padding-end: 8px;
+    margin-bottom: 16px;
+
+    ion-input {
+      --border-color: #ebeef0;
+    }
+  }
+
+  ion-button {
+    --background: #1da1f2;
+    --background-hover: #0c85d0;
+    --color: #ffffff;
+    margin-top: 24px;
+  }
+
+  .signup-link {
+    text-align: center;
+    margin-top: 16px;
+    color: #1da1f2;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

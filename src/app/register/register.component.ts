@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +15,7 @@ export class RegisterComponent {
     confirmPassword: ''
   };
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private navCtrl: NavController) {}
 
   registerUser() {
     // Aquí puedes agregar la lógica para registrar al usuario
@@ -22,6 +23,9 @@ export class RegisterComponent {
     
     // Después de registrar al usuario, puedes redirigirlo a la página de inicio de sesión
     this.router.navigate(['/login']);
+  }
+  volver() {
+    this.navCtrl.back();
   }
 }
 

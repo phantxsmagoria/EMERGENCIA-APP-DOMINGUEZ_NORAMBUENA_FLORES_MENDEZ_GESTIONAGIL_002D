@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-reset-password',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class ResetPasswordComponent {
   email!: string;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private navCtrl: NavController) {
     this.email = '';
   }
 
@@ -18,5 +19,9 @@ export class ResetPasswordComponent {
     // Por ejemplo, puedes utilizar un servicio para enviar un correo electrónico de restablecimiento
 
     console.log('Enviar enlace de restablecimiento a:', this.email);
+  }
+
+  volver() {
+    this.navCtrl.back();
   }
 }

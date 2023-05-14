@@ -1,47 +1,65 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header #header >
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-button routerLink="/login">
+        <ion-icon slot="icon-only" size="small" name="chevron-back-outline"></ion-icon>
+      </ion-button>
     </ion-buttons>
-    <ion-title>Línea de tiempo</ion-title>
+
+    <ion-title class="ion-text-center">
+      <ion-icon name="notifications-outline" size="medium"></ion-icon>
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-avatar slot="start">
-        <img src="assets/profile-picture.png" alt="Foto de perfil">
-      </ion-avatar>
-      <ion-card-title>Nombre de usuario</ion-card-title>
-      <ion-card-subtitle>@usuario</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      Contenido del tweet...
-    </ion-card-content>
-    <ion-row class="actions">
-      <ion-col>
-        <ion-button color="primary" expand="full" fill="clear" size="small">
-          <ion-icon name="thumbs-up" slot="start"></ion-icon>
-          Me gusta
-        </ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button color="primary" expand="full" fill="clear" size="small">
-          <ion-icon name="chatbubble-outline" slot="start"></ion-icon>
-          Comentar
-        </ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button color="primary" expand="full" fill="clear" size="small">
-          <ion-icon name="share" slot="start"></ion-icon>
-          Compartir
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-card>
+<ion-content >
+  <ion-list>
 
-  <!-- Repite la estructura de la tarjeta para más tweets -->
+    <ion-item *ngFor="let tweet of tweets">
+
+      <ion-avatar color="dark"slot="start">
+        <img src="{{ tweet.img }}" alt="Avatar">
+      </ion-avatar>
+
+      <ion-label>
+        <h2 >{{ tweet.username }}</h2>
+        <h3 >@{{ tweet.handle }}</h3>
+        <p>{{ tweet.text }}</p>
+
+        <img src="{{ tweet.img }}" alt="Tweet">
+
+        <ion-row class="engagement">
+
+          <ion-col size="4">
+            <ion-icon name="heart" class="icon"></ion-icon>
+            <span>{{ tweet.like }}</span>
+          </ion-col>
+
+          <ion-col size="4">
+            <ion-icon name="repeat" class="icon"></ion-icon>
+            <span>{{ tweet.retweets }}</span>
+          </ion-col>
+
+          <ion-col size="4">
+            <ion-icon name="chatbubble-ellipses" class="icon"></ion-icon>
+            <span>{{ tweet.response }}</span>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-label>
+      
+    </ion-item>
+  </ion-list>
 </ion-content>
+
+
+
+
 
 

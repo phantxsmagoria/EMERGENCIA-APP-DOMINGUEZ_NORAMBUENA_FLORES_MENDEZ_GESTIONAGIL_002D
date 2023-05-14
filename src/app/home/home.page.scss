@@ -1,2 +1,144 @@
 
+
+ion-content {
+  ion-list {
+    ion-item {
+      display: flex;
+      align-items: flex-start;
+      ion-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        margin-top: 10px;
+      }
+
+      ion-label {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        h2 {
+          font-size: 12px;
+          font-weight: bold;
+          margin-bottom: 2px;
+        }
+
+        h3 {
+          font-size: 14px;
+          color: rgb(209, 209, 209);
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-bottom: 10px;
+          white-space: pre-line; /* Permitir saltos de línea */
+          word-break: break-word; /* Dividir palabras largas */
+          text-align: justify; 
+          color: white;
+          font-family: SourceSans;
+        }
+        
+        
+
+        img {
+          max-width: 100%;
+          height: auto;
+          margin-bottom: 10px;
+          border-radius: 10px;
+        }
+
+        .engagement {
+          display: flex;
+          align-items: center;
+          color: rgb(255, 255, 255);
+          font-size: 14px;
+          ion-icon {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+  .logo {
+    margin: 10% 0 15% 0;
+  }
+  
+  .letrapequena {
+    font-size: 0.8em;
+    text-align: justify;
+    font-family: 'SourceSans';
+  }
+  
+  .letramediana {
+    font-size: 1.5em;
+    text-align: justify;
+    font-family: 'SourceSans';
+    font-weight: bold;
+  
+  }
+  
+  .login-border {
+    color: #999999;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    background: white;
+    font-size: 0.9em;
+    padding: 0 0 0 10px !important;
+  
+  }
+  .espacio {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  
+  .espacioabajo {
+    margin-bottom: 23px;
+  }
+  
+  .masancho {
+    width: 98.5% !important;
+  
+  }
+  
+  .timeline {
+    .tweet {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+  
+      .avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 12px;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+  
+      .tweet-content {
+        flex: 1;
+  
+        .username {
+          font-weight: bold;
+          margin-bottom: 4px;
+        }
+  
+        .message {
+          color: #333;
+        }
+      }
+    }
+  }
+  
+  
+  
   

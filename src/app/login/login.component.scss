@@ -1,32 +1,30 @@
-.login-wrapper {
-  padding: 16px;
+.logo {
+  width: 50%;
+  margin: 10% 0 20% 0;
+}
 
-  ion-item {
-    --padding-start: 0;
-    --padding-end: 0;
-    --inner-padding-start: 8px;
-    --inner-padding-end: 8px;
-    margin-bottom: 16px;
+.letrapequena {
+  font-size: 0.8em;
+  text-align: justify;
+  font-family: 'SourceSans';
+}
 
-    ion-input {
-      --border-color: #ebeef0;
-    }
-  }
+.letramediana {
+  font-size: 1.5em;
+  text-align: justify;
+  font-family: 'SourceSans';
+  font-weight: bold;
 
-  ion-button {
-    --background: #1da1f2;
-    --background-hover: #0c85d0;
-    --color: #ffffff;
-    margin-top: 24px;
-  }
+}
 
-  .signup-link {
-    text-align: center;
-    margin-top: 16px;
-    color: #1da1f2;
+.login-border {
+  --padding-start: 10px !important;
+  color: #999999;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: white;
+}
 
-    a {
-      text-decoration: none;
-    }
-  }
+.transparente {
+  background: transparent;
 }

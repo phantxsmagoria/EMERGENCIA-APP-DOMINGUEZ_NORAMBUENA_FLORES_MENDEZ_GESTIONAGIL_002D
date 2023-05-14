@@ -1,10 +1,33 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Inicio de Sesión
-    </ion-title>
-  </ion-toolbar>
+
 </ion-header>
+
+<ion-content class="ion-padding ion-text-center" color="dark">
+  <ion-icon name="notifications-outline" style="zoom:3.0;" class="logo"></ion-icon>
+  
+  <div class="">
+  <ion-title class="texto letramediana">Inicia sesión en</ion-title>
+  <ion-title class="texto letrapequena">EmergenciaAPP - DUOCUC</ion-title>
+  </div>  
+
+</ion-content>
+
+<ion-content class="ion-padding ion-text-center" color="dark">
+  <div class="" color="dark">
+    <ion-item lines="none" color="dark" >
+      <ion-input   [(ngModel)]="email" type="text" class="login-border" placeholder="Mail">
+      </ion-input>
+    </ion-item>
+    <ion-item lines="none" color="dark">
+      <ion-input [(ngModel)]="password" type="password" class="login-border" placeholder="Contraseña">
+      </ion-input>
+    </ion-item>
+  </div>
+
+</ion-content> 
+
+
+
 
 <ion-content>
   <div class="login-wrapper">

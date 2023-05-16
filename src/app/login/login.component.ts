@@ -20,7 +20,7 @@ export class LoginComponent {
     // Agrega la lógica de autenticación aquí
     // Por ejemplo, puedes utilizar un servicio para verificar las credenciales
 
-    if (this.email === 'usuario@example.com' && this.password === '123456') {
+    if (this.email === 'usuario@duocuc.com' && this.password === '123456') {
       // Credenciales válidas, redirige a la página principal
       this.router.navigate(['/home']);
     } else {

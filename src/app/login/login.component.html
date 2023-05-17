@@ -34,14 +34,7 @@
 </ion-content>
 
 <!-- Agrega este código al final de tu plantilla -->
-<ion-toast
-  *ngIf="errorMessage"
-  [message]="errorMessage"
-  position="bottom"
-  duration="3000"
-  translucent="true"
-  color="danger"
->
+<ion-toast *ngIf="errorMessage" [message]="errorMessage">
   <ion-icon name="close" slot="end" (click)="errorMessage = ''"></ion-icon>
 </ion-toast>
 

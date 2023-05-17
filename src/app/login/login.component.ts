@@ -21,9 +21,9 @@ export class LoginComponent {
   async presentToast(message: string) {
     const toast = await this.toastController.create({
       message: message,
-      duration: 3000,
+      duration: 500,
       position: 'bottom',
-      color: 'danger',
+      color: 'dark',
       buttons: [
         {
           text: 'Cerrar',
@@ -38,23 +38,24 @@ export class LoginComponent {
   }
   
   login() {
-    const emailRegex = /^[A-Za-z0-9]+@duocuc\.cl$/; 
+    const emailRegex = /^[A-Za-z0-9]+@(duocuc|profesor\.duoc)\.cl$/;
     // duocuc.cl o profesor.duoc.cl 
   
     if (!emailRegex.test(this.email)) {
-      this.presentToast('Correo electrónico no válido');
+      this.presentToast('Correo electrónico incorrecto');
       return;
     }
   
-    // Agrega la lógica de autenticación aquí
-    // Por ejemplo, puedes utilizar un servicio para verificar las credenciales
+    // If de autentificacion
   
-    if (this.email.endsWith('@duocuc.cl') && this.password === '123456') {
+    if ((this.email.endsWith('@duocuc.cl') || this.email.endsWith('@profesor.duoc.cl')) 
+    && this.password === '123456') {
       // Credenciales válidas, redirige a la página principal
       this.router.navigate(['/home']);
     } else {
       // Credenciales inválidas, muestra un mensaje de error
-      this.presentToast('Credenciales inválidas');
+      this.presentToast('Contraseña incorrecta');
     }
+    
   }
 }

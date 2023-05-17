@@ -1,45 +1,47 @@
 <ion-header>
-
 </ion-header>
 
 <ion-content class="ion-padding ion-text-center" color="dark">
-
   <ion-icon name="notifications-outline" style="zoom:3.0;" class="logo"></ion-icon>
   
   <div class="espacioabajo">
-  <ion-title class="texto letramediana">Inicia sesión en</ion-title>
-  <ion-title class="texto letrapequena">EmergenciaAPP - DUOCUC </ion-title>
+    <ion-title class="texto letramediana">Inicia sesión en</ion-title>
+    <ion-title class="texto letrapequena">EmergenciaAPP - DUOCUC</ion-title>
   </div>
 
   <div class="" color="dark">
-
-    <ion-item lines="none" color="dark" >
-      <ion-input   [(ngModel)]="email" type="text" class="login-border" placeholder="Mail">
-      </ion-input>
+    <ion-item lines="none" color="dark">
+      <ion-input [(ngModel)]="email" type="text" class="login-border" placeholder="Mail"></ion-input>
     </ion-item>
 
     <ion-item lines="none" color="dark">
-      <ion-input [(ngModel)]="password" type="password" class="login-border" placeholder="Contraseña">
-      </ion-input>
+      <ion-input [(ngModel)]="password" type="password" class="login-border" placeholder="Contraseña"></ion-input>
     </ion-item>
-    
   </div>
 
   <div class="ion-padding-top espacio" color="dark">
-    <ion-button shape="round" (click)="login()" class="letrapequena" fill="block">
-      Siguiente
-     </ion-button>
-     <ion-button color="light" class="masancho letrapequena" shape="round" routerLink="/reset-password" fill="outline">
+    <ion-button shape="round" (click)="login()" class="letrapequena" fill="block">Siguiente</ion-button>
+    <ion-button color="light" class="masancho letrapequena" shape="round" routerLink="/reset-password" fill="outline">
       ¿Olvidaste tu contraseña?
-     </ion-button>
+    </ion-button>
   </div>
 
   <div>
     <ion-item lines="none" color="dark">
-      <ion-label class="letrapequena" >¿No tienes una cuenta? 
-      <a href="/register">Regístrate aquí</a>
-      </ion-label>
+      <ion-label class="letrapequena">¿No tienes una cuenta? <a href="/register">Regístrate aquí</a></ion-label>
     </ion-item>
   </div>
 </ion-content>
+
+<!-- Agrega este código al final de tu plantilla -->
+<ion-toast
+  *ngIf="errorMessage"
+  [message]="errorMessage"
+  position="bottom"
+  duration="3000"
+  translucent="true"
+  color="danger"
+>
+  <ion-icon name="close" slot="end" (click)="errorMessage = ''"></ion-icon>
+</ion-toast>
 

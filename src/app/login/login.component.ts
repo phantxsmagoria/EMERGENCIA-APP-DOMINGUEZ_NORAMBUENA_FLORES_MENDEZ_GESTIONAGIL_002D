@@ -16,7 +16,7 @@ export class LoginComponent {
   constructor(private router: Router, private toastController: ToastController) {
     this.email = '';
     this.password = '';
-  }
+}
 
   async presentToast(message: string) {
     const toast = await this.toastController.create({
